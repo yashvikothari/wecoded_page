@@ -1,0 +1,163 @@
+/* WeCoded Design System */
+:root {
+    --blue: #4531EA;
+    --green: #CCEA71;
+    --purple: #9D00E5;
+    --gradient: linear-gradient(to right, var(--blue), var(--purple));
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5b3a83;
+    padding: 20px;
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+    border: 5px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    margin-right: 20px;
+}
+
+h1 {
+    color: #ffffff;
+    margin-top: 12px;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background: var(--gradient), url('https://dev-to-uploads.s3.amazonaws.com/uploads/articles/njtfhgavekf053nkw924.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    background: var(--gradient);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    width: 50px;
+    vertical-align: middle;
+}
+
+header h1 {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+nav {
+    
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--blue);
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters label,
+.filters select,
+.filters input {
+    margin-right: 10px;
+}
+
+.articles-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.article-card {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.article-card h3 {
+    color: var(--purple);
+}
+
+.tags span {
+    background-color: var(--green);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+footer {
+   text-align: center;
+   padding-top: 20px; 
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #ddd;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background-color: var(--purple);
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
