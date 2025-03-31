@@ -1,136 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>WeCoded Article Dev Challenge 2025</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<header>
-			<img
-				src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nfcn6junu8xg5e9910ip.png"
-				alt="WeCoded Logo"
-				id="logo"
-			/>
-			<h1>WeCoded Dev Challenge 2025</h1>
-		</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeCoded Article Dev Challenge 2025</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nfcn6junu8xg5e9910ip.png"
+        alt="WeCoded Logo"
+        id="logo"
+      />
+      <h1>WeCoded Dev Challenge 2025</h1>
+    </header>
 
-		<nav>
-			<ul>
-				<li><a href="#about-us">About Us</a></li>
-				<li><a href="#our-history">Our History</a></li>
-				<li><a href="#contact-me">Contact Me</a></li>
-			</ul>
-		</nav>
+    <nav>
+      <ul>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#our-history">Our History</a></li>
+        <li><a href="#contact-me">Contact Me</a></li>
+      </ul>
+    </nav>
 
-		<div class="container">
-			<!-- Tab Navigation -->
-			<div class="tabs">
-				<button
-					class="tab-button active"
-					id="wecoded-tab"
-					onclick="switchTab('wecoded')"
-				>
-					Stories from WeCoded 2025
-				</button>
-				<button
-					class="tab-button"
-					id="shecoded-tab"
-					onclick="switchTab('shecoded')"
-				>
-					Stories from SheCoded 2025
-				</button>
-			</div>
+    <div class="container">
+      <!-- Tab Navigation -->
+      <div class="tabs">
+        <button
+          class="tab-button active"
+          id="wecoded-tab"
+          onclick="switchTab('wecoded')"
+        >
+          Stories from WeCoded 2025
+        </button>
+        <button
+          class="tab-button"
+          id="shecoded-tab"
+          onclick="switchTab('shecoded')"
+        >
+          Stories from SheCoded
+        </button>
+      </div>
 
-			<!-- WeCoded Content -->
-			<div id="wecoded-content" class="tab-content active">
-				<div class="filters">
-					<label for="wecoded-sort-by">Sort by:</label>
-					<select
-						id="wecoded-sort-by"
-						onchange="applyFilters('wecoded')"
-					>
-						<option value="reactions">Most Reactions</option>
-						<option value="newest">Newest First</option>
-					</select>
+      <!-- WeCoded Content -->
+      <div id="wecoded-content" class="tab-content active">
+        <div class="filters">
+          <label for="wecoded-sort-by">Sort by:</label>
+          <select id="wecoded-sort-by" onchange="applyFilters('wecoded')">
+            <option value="reactions">Most Reactions</option>
+            <option value="newest">Newest First</option>
+          </select>
 
-					<label for="wecoded-date-filter">Published after:</label>
-					<input
-						type="date"
-						id="wecoded-date-filter"
-						onchange="applyFilters('wecoded')"
-					/>
-				</div>
+          <label for="wecoded-date-filter">Published after:</label>
+          <input
+            type="date"
+            id="wecoded-date-filter"
+            onchange="applyFilters('wecoded')"
+          />
+        </div>
 
-				<div class="articles-container" id="wecoded-articles-container">
-					<!-- WeCoded articles will be dynamically inserted here -->
-				</div>
-			</div>
+        <div class="articles-container" id="wecoded-articles-container">
+          <!-- WeCoded articles will be dynamically inserted here -->
+        </div>
+      </div>
 
-			<!-- SheCoded Content -->
-			<div id="shecoded-content" class="tab-content hidden">
-				<div class="filters">
-					<label for="shecoded-sort-by">Sort by:</label>
-					<select
-						id="shecoded-sort-by"
-						onchange="applyFilters('shecoded')"
-					>
-						<option value="reactions">Most Reactions</option>
-						<option value="newest">Newest First</option>
-					</select>
+      <!-- SheCoded Content -->
+      <div id="shecoded-content" class="tab-content hidden">
+        <div class="filters">
+          <label for="shecoded-sort-by">Sort by:</label>
+          <select id="shecoded-sort-by" onchange="applyFilters('shecoded')">
+            <option value="reactions">Most Reactions</option>
+            <option value="newest">Newest First</option>
+          </select>
 
-					<label for="shecoded-date-filter">Published after:</label>
-					<input
-						type="date"
-						id="shecoded-date-filter"
-						onchange="applyFilters('shecoded')"
-					/>
-				</div>
+          <label for="shecoded-date-filter">Published after:</label>
+          <input
+            type="date"
+            id="shecoded-date-filter"
+            onchange="applyFilters('shecoded')"
+          />
+        </div>
 
-				<div
-					class="articles-container"
-					id="shecoded-articles-container"
-				>
-					<!-- SheCoded articles will be dynamically inserted here -->
-				</div>
-			</div>
+        <div class="articles-container" id="shecoded-articles-container">
+          <!-- SheCoded articles will be dynamically inserted here -->
+        </div>
+      </div>
 
-			<!-- About Us Section -->
-			<h2 id="about-us">About Us</h2>
-			<p>
-				WeCoded is an initiative aimed at celebrating the diverse and
-				dynamic community of developers. We believe in fostering a
-				supportive environment where every voice is heard and valued.
-			</p>
-			<ul>
-				<li>Empowering developers through knowledge sharing.</li>
-				<li>Building connections with like-minded professionals.</li>
-				<li>
-					Providing access to curated articles from dev and industry
-					experts.
-				</li>
-			</ul>
+      <!-- About Us Section -->
+      <h2 id="about-us">About Us</h2>
+      <p>
+        WeCoded is an initiative aimed at celebrating the diverse and dynamic
+        community of developers. We believe in fostering a supportive
+        environment where every voice is heard and valued.
+      </p>
+      <ul>
+        <li>Empowering developers through knowledge sharing.</li>
+        <li>Building connections with like-minded professionals.</li>
+        <li>
+          Providing access to curated articles from dev and industry experts.
+        </li>
+      </ul>
 
-			<!-- History Section -->
-			<h2 id="our-history">Our History</h2>
-			<p>
-				Since 2018, DEV has celebrated International Women's Day with
-				SheCoded, a call to action for the community to share powerful
-				stories from women in tech about their journeys, challenges, and
-				triumphs. What began as a platform for women's voices naturally
-				evolved into WeCoded in 2023 — an inclusive space that amplifies
-				all underrepresented and marginalized voices in our tech
-				industry.
-			</p>
+      <!-- History Section -->
+      <h2 id="our-history">Our History</h2>
+      <p>
+        Since 2018, DEV has celebrated International Women's Day with SheCoded,
+        a call to action for the community to share powerful stories from women
+        in tech about their journeys, challenges, and triumphs. What began as a
+        platform for women's voices naturally evolved into WeCoded in 2023 — an
+        inclusive space that amplifies all underrepresented and marginalized
+        voices in our tech industry.
+      </p>
 
-			<!-- Contact Me Section -->
-			<h2 id="contact-me">Contact Me</h2>
-			<p>Email me yashvikothari@outlook.com or visit dev.to</p>
-		</div>
+      <!-- Contact Me Section -->
+      <h2 id="contact-me">Contact Me</h2>
+      <p>Email me yashvikothari@outlook.com or visit dev.to</p>
+    </div>
 
-		<footer>© Yashvi Kothari | WeCoded,Since 2023</footer>
+    <footer>© Yashvi Kothari | WeCoded,Since 2023</footer>
 
-		<script src="script.js"></script>
-	</body>
+    <script src="script.js"></script>
+  </body>
 </html>
